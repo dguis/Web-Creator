@@ -9,7 +9,7 @@
 <option value="yellow">Yellow</option>
 <option value="red">Red</option>
 </select>
-<button onclick="download('index.html', '<style> background-color:'+document.getElementById('bg-color').value+'; </style>');">Submit</button>
+<button onclick="download('index.html', '<style> body{ background-color:'+document.getElementById('bg-color').value+'; }</style>');">Submit</button>
 </body>
 <script>
 function download(filename, text) {
