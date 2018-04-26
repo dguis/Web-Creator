@@ -29,7 +29,13 @@
 <script>
   var pgUp = function(){
    var pgs = document.getElementById('pgs').value.toString();
+   var pgsv = document.getElementById('pgs').value;
+   if(pgsv<1 || pgsv>10 || pgsv==''){
+     alert('Page value must be between 1 and 10.');
+   }
+    else{
     alert('Button not set up yet. Come back later! (Pages='+pgs+')');
+    }
   }
 function download(filename, text) {
   var element = document.createElement('a');
