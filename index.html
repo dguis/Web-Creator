@@ -8,9 +8,10 @@
   <button onclick="upPa();">Update</button>
 </body>
 <script>
-pages = document.getElementById('pgs').value;
+pgs = document.getElementById('pgs').value;
 var upPa = function(){
- alert(pages);                
+ alert(pgs);
+ console.log(pgs);
 }
 function download(filename, text) {
   var element = document.createElement('a');
