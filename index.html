@@ -6,17 +6,11 @@
   <form onsubmit="download('test.txt', 'etfdgfdg');">
 <h3>Number of Pages: (No more than 10)</h3>
   <input type="number" max="10" min="1" id="pgs"></input>
-  <button onclick="upPa();">Update</button>
-  <br>
+  <br><br>
   <input type="submit">
   </form>
 </body>
 <script>
-var upPa = function(){
- var pgs = document.getElementById('pgs').value;
- alert(pgs);
- console.log(pgs);
-}
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -32,5 +26,9 @@ function download(filename, text) {
 function site(template) {
                  
 }
+  while (1){
+    var pgs = document.getElementById('pgs').value;
+    alert(pgs);
+  }
 </script>
 </html>
