@@ -4,12 +4,15 @@
 </head>
 <body>
 <h3>Number of Pages: (No more than 10)</h3>
-  <input type="number" max="10"></input>
+  <input type="number" max="10" min="1"></input>
   <button onclick="upPa();" id="pgup">Update</button>
 <button onclick="download('index.html', >Submit</button>
 </body>
 <script>
 pages = document.getElementById('pgup').value;
+function upPa(){
+ alert(pages);                
+}
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -24,9 +27,6 @@ function download(filename, text) {
 }
 function site(template) {
                  
-}
-function upPa(){
- alert(pages);                
 }
 </script>
 </html>
