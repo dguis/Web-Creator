@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-  <form onsubmit="download('test.txt', 'etfdgfdg');">
+  <form onsubmit="site(0);">
 <h3>Number of Pages: (No more than 10)</h3>
   <input type="number" max="10" min="1" id="pgs" value="1"></input>  <button onclick="pgUp();" style="display: inline;" type="button">Update Pages</button>
   <h3>Background Color:</h3>
@@ -44,8 +44,14 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 function site(template) {
-                 
+ if(template==0){
+  var top = "<!DOCTYPE html><html><head>";
+  //var head = title, favicon, etc.;
+  var mid = "</head><body>";
+  //var body = page content;
+  var end = "</body></html>";
+  download("index.html",top+/*head*/+mid+/*body*/+end);
+ }
 }
-  
 </script>
 </html>
