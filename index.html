@@ -3,15 +3,13 @@
 <head>
 </head>
 <body>
-<h2>Background Color:</h2>
-<select id="bg-color">
-<option value="blue">Blue</option>
-<option value="yellow">Yellow</option>
-<option value="red">Red</option>
-</select>
-<button onclick="download('index.html', '<style> body{ background-color:'+document.getElementById('bg-color').value+'; }</style>');">Submit</button>
+<h3>Number of Pages: (No more than 10)</h3>
+  <input type="number" max="10"></input>
+  <button onclick="upPa();" id="pgup">Update</button>
+<button onclick="download('index.html', >Submit</button>
 </body>
 <script>
+pages = document.getElementById('pgup').value;
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -23,6 +21,12 @@ function download(filename, text) {
   element.click();
 
   document.body.removeChild(element);
+}
+function site(template) {
+                 
+}
+function upPa(){
+ alert(pages);                
 }
 </script>
 </html>
