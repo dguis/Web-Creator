@@ -4,12 +4,12 @@
 </head>
 <body>
 <h3>Number of Pages: (No more than 10)</h3>
-  <input type="number" max="10" min="1"></input>
-  <button onclick="upPa();" id="pgup">Update</button>
+  <input type="number" max="10" min="1" id="pgs"></input>
+  <button onclick="upPa();">Update</button>
 <button onclick="download('index.html', >Submit</button>
 </body>
 <script>
-pages = document.getElementById('pgup').value;
+pages = document.getElementById('pgs').value;
 var upPa = function(){
  alert(pages);                
 }
