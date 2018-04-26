@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h2>Background Color:</h2>
+<select id="bg-color">
+<option value="blue">Blue</option>
+<option value="yellow">Yellow</option>
+<option value="red">Red</option>
+</select>
+<button onclick="create(index.html, document.getElementById('bg-color').value);">Submit</button>
+</body>
+<script>
+function create(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+
+  element.style.display = 'none';
+  document.body.appendChild(element);
+
+  element.click();
+
+  document.body.removeChild(element);
+}
+</script>
+</html>
