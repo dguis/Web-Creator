@@ -9,8 +9,13 @@
   <br><br>
   <input type="submit">
   </form>
+  <button>Update Pages</button>
 </body>
 <script>
+  var pgUp = function(){
+   var pgs = document.getElementById('pgs').value;
+    alert('Button not set up yet. Come back later! (Pages='+pgs+')');
+  }
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -26,20 +31,6 @@ function download(filename, text) {
 function site(template) {
                  
 }
-  while (1){
-    var pgs = document.getElementById('pgs').value;
-    if(pgs != ''){
-   if (slots < pgs){
-    for (slots < pgs; slots++){
-      alert(pgs);
-    }
-   }
-    else{
-      for (slots > pgs; slots--){
-      alert(pgs);
-    }
-    }
-    }
-  }
+  
 </script>
 </html>
