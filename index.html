@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>D-Multi Web-Creator</title>
 </head>
 <body>
   <form onsubmit="site(0);">
@@ -208,63 +209,88 @@
      alert('Page value must be between 1 and 10.');
    }
     else{
-    alert('Button not set up yet. Come back later! (Pages='+pgs+')');
+    //alert('Button not set up yet. Come back later! (Pages='+pgs+')');
+if(pgsv == 1 && p2sh == false){
+//Do nothing
+}
+else{
+if(confirm('Are you sure? This will update your form to include input slots for '+pgs+' page(s).') === true){
 if(pgsv>1){
 document.getElementById('page2').style.display="inline";
+p2sh = true;
 }
 else{
   document.getElementById('page2').style.display="none";
+  p2sh = false;
 }
 if(pgsv>2){
 document.getElementById('page3').style.display="inline";
+p3sh = true;
 }
 else{
   document.getElementById('page3').style.display="none";
+  p3sh = false;
 }
 if(pgsv>3){
 document.getElementById('page4').style.display="inline";
+p4sh = true;
 }
 else{
   document.getElementById('page4').style.display="none";
+  p4sh = false;
 }
 if(pgsv>4){
 document.getElementById('page5').style.display="inline";
+p5sh = true;
 }
 else{
   document.getElementById('page5').style.display="none";
+  p5sh = false;
 }
 if(pgsv>5){
 document.getElementById('page6').style.display="inline";
+p6sh = true;
 }
 else{
   document.getElementById('page6').style.display="none";
+  p6sh = false;
 }
 if(pgsv>6){
 document.getElementById('page7').style.display="inline";
+p7sh = true;
 }
 else{
   document.getElementById('page7').style.display="none";
+  p7sh = false;
 }
 if(pgsv>7){
 document.getElementById('page8').style.display="inline";
+p8sh = true;
 }
 else{
   document.getElementById('page8').style.display="none";
+  p8sh = false;
 }
 if(pgsv>8){
 document.getElementById('page9').style.display="inline";
+p9sh = true;
 }
 else{
   document.getElementById('page9').style.display="none";
+  p9sh = false;
 }
 if(pgsv>9){
 document.getElementById('page10').style.display="inline";
+p10sh = true;
 }
 else{
   document.getElementById('page10').style.display="none";
+  p10sh = false;
 }
-    }
-  }
+  }//Check
+    }//Check
+      }//Check
+        }//Check
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -292,7 +318,8 @@ function site(template) {
             //var body = page content;
             var end = "</body></html>";
             download("index.html",top+head+title+head2+style+style2+style3+head3+mid/*+body*/+end);
-
+if(/*p2sh == true*/1)){
+alert('File 1 complete! Press OK to continue.');
             var top = "<!DOCTYPE html><html><head>";
             var head = "<title>";
             var title = "Page2";
@@ -305,6 +332,23 @@ function site(template) {
             //var body = page content;
             var end = "</body></html>";
             download("Page2.html",top+head+title+head2+style+style2+style3+head3+mid/*+body*/+end);
+            if(/*p3sh == true*/1){
+              alert('File 2 complete! Press OK to continue.');
+              var top = "<!DOCTYPE html><html><head>";
+              var head = "<title>";
+              var title = "Page2";
+              var head2 = "</title> <style>";
+              var style = "body{background-color: ";
+              var style2 = document.getElementById('bgc3').value;
+              var style3 = "}";
+              var head3 = "</style";
+              var mid = "</head><body>";
+              //var body = page content;
+              var end = "</body></html>";
+              download("Page3.html",top+head+title+head2+style+style2+style3+head3+mid/*+body*/+end);
+            }
+          }
+            alert('Download complete! Place all of the downloaded files in one folder, and open the file named "index.html".\nThank you for choosing D-Multi Web Creator!');
       }
     }
 }
